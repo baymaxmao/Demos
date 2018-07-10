@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using TestMVC.DataAccessLayer;
 
 namespace TestMVC.Models
 {
@@ -9,6 +10,9 @@ namespace TestMVC.Models
     {
         public List<Employee> GetEmployees()
         {
+            SalesERPDAL salesDal = new SalesERPDAL();
+            return salesDal.employees.ToList();
+            /*
             List<Employee> employees = new List<Employee>();
             Employee emp = new Employee();
             emp.FirstName = "johnson";
@@ -27,8 +31,9 @@ namespace TestMVC.Models
             emp.LastName = "pattinson";
             emp.Salary = 200000;
             employees.Add(emp);
+             return employees;
+            */
 
-            return employees;
         }
     }
 }
