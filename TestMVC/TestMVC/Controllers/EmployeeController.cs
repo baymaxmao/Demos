@@ -21,10 +21,11 @@ namespace TestMVC.Controllers
         //通过连接地址中可以传入参数
         [Authorize]
         //加了认证属性会先通过web.config设置的authertication跳转到登录页面
+        //仅仅放在这里授权是有问题的,还是可以通过链接http://localhost:55031/Employee/AddNew访问页面
         public ActionResult Index()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-
+            employeeListViewModel.UserName = User.Identity.Name;
             EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
             List<Employee> employees = empBal.GetEmployees();
 
