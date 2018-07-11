@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -55,6 +56,14 @@ namespace TestMVC.Controllers
          */
         public ActionResult SaveEmployee(Employee e,string BtnSubmit)
         {
+            //处理参数名称与类属性不匹配的情况，使用Request类获取参数的值再赋值给类实例
+            /*
+             e.FirstName = Request.Form["FirstName"];
+
+             e.LastName = Request.Form["LastName"];
+
+                 e.Salary = Convert.ToInt32(Request.Form["Salary"]);
+           */
             //MVC 的Model Binder:
             //无论请求是否由带参的action方法生成，Model Binder都会自动执行。
             //Model Binder会通过方法的元参数迭代，然后会和接收到参数名称做对比。如果匹配，则响应接收的数据，并分配给参数。
@@ -63,9 +72,18 @@ namespace TestMVC.Controllers
             switch (BtnSubmit)
             {
                 case "Save Employee":
-                return Content(e.FirstName + "|" + e.LastName + "|" + e.Salary);
+                    if (ModelState.IsValid)
+                    {
+                        EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
+                        empBal.SaveEmployee(e);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        return View("CreateEmployee");
+                    }
                 case "Cancel":
-                 return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
             return new EmptyResult();
         }

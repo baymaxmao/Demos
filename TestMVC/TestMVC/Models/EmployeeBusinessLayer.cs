@@ -35,5 +35,13 @@ namespace TestMVC.Models
             */
 
         }
+        public Employee SaveEmployee(Employee e)
+        {
+            SalesERPDAL salesDal = new SalesERPDAL();
+            salesDal.employees.Add(e);
+            salesDal.SaveChanges();
+            return e;
+        }
+       
     }
 }
