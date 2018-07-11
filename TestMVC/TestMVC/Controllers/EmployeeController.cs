@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using TestMVC.Models;
 using TestMVC.ViewModels;
+using TestMVC.Filters;
 
 namespace TestMVC.Controllers
 {
@@ -25,7 +26,11 @@ namespace TestMVC.Controllers
         public ActionResult Index()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-            employeeListViewModel.UserName = User.Identity.Name;
+            BaseViewModel baseViewModel = new BaseViewModel();
+            baseViewModel.UserName = User.Identity.Name;
+            baseViewModel.FooterData = new FooterViewModel();
+            baseViewModel.FooterData.CompanyName = "武汉网友科技有限公司";
+            baseViewModel.FooterData.Year = DateTime.Now.Year.ToString();
             EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
             List<Employee> employees = empBal.GetEmployees();
 
@@ -47,6 +52,7 @@ namespace TestMVC.Controllers
                 //return View("MyView");
                 return View("Index", employeeListViewModel);
         }
+        [AdminFilter]
         public ActionResult AddNew()
         {
             return View("CreateEmployee",new CreateEmployeeViewModel());
@@ -95,6 +101,17 @@ namespace TestMVC.Controllers
                 return RedirectToAction("Index");
             }
             return new EmptyResult();
+        }
+        public ActionResult GetAddNewLink()
+        {
+            if(Convert.ToBoolean(Session["IsAdmin"]))
+            {
+                return PartialView("AddNewLink");
+            }
+            else
+            {
+                return new EmptyResult();
+            }
         }
        
     }

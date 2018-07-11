@@ -1,42 +1,35 @@
 ﻿@using TestMVC.ViewModels
 @model EmployeeListViewModel
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/MyLayout.cshtml";
 
 }
+@section TitleSection{
+    MyView
+}
+@section ContentBody{
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css" type="text/css"/>
-    <title>MyView</title>
-</head>
-<body>
-    <div style="text-align:right">
-        Hello,@Model.UserName
-    <a href="/Authentication/Logout">LogOut</a>
-    </div>
     <hr />
+    @{
+        Html.RenderAction("GetAddNewLink");
+    }
     <div>
-        <a href="/Employee/AddNew">Add New</a>
-       <table>
-           <tr>
-               <th>Employee Name</th>
-               <th>Salary</th>
-           </tr>
-           @foreach(EmployeeViewModel item in Model.Employees)
-           {
-               <tr>
-                <td>@item.EmployeeName</td>
-                <td style="background-color:@item.SalaryColor">@item.Salary</td>
-               </tr>
-           }
-           
-       </table>
+        <table>
+            <tr>
+                <th>Employee Name</th>
+                <th>Salary</th>
+            </tr>
+            @foreach (EmployeeViewModel item in Model.Employees)
+            {
+                <tr>
+                    <td>@item.EmployeeName</td>
+                    <td style="background-color:@item.SalaryColor">@item.Salary</td>
+                </tr>
+            }
+
+        </table>
+
     </div>
     <button class="btn-primary">测试bootstrap是否可用</button>
-</body>
-</html>
+}
+

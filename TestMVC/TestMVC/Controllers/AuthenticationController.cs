@@ -21,17 +21,26 @@ namespace TestMVC.Controllers
             if (ModelState.IsValid)
             {
                 EmployeeBusinessLayer bal = new EmployeeBusinessLayer();
-                if (bal.IsValidUser(u))
+                UserStatus status = bal.GetUserValidity(u);
+                bool IsAdmin = false;
+                if (status == UserStatus.AuthenticatedAdmin)
                 {
-                    FormsAuthentication.SetAuthCookie(u.UserName, false);
-                    return RedirectToAction("Index", "Employee");
+                    IsAdmin = true;
+                }
+                else if(status==UserStatus.AuthentucatedUser)
+                {
+                    IsAdmin = false;
                 }
                 else
                 {
                     ModelState.AddModelError("CredentialError", "Invalid Username or Password");
                     return View("Login");
                 }
-            }
+                FormsAuthentication.SetAuthCookie(u.UserName, false);
+                //Session是Asp.Net的特性之一，可以在MVC中重用，可用于暂存用户相关数据，session变量周期是穿插于整个用户生命周期的
+                Session["IsAdmin"] = IsAdmin;
+                return RedirectToAction("Index", "Employee");            
+        }
             else
             {
                 return View("Login");

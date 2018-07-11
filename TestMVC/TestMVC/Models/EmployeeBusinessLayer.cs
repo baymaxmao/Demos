@@ -42,6 +42,7 @@ namespace TestMVC.Models
             salesDal.SaveChanges();
             return e;
         }
+        /*
         public bool IsValidUser(UserDetails u)
         {
             if (u.UserName == "Admin" && u.Password == "Admin")
@@ -50,6 +51,22 @@ namespace TestMVC.Models
             }
             else
                 return false;
+        }
+        */
+        public UserStatus GetUserValidity(UserDetails u)
+        {
+            if(u.UserName=="Admin" && u.Password=="Admin")
+            {
+                return UserStatus.AuthenticatedAdmin;
+            }
+            else if(u.UserName=="Sukesh" && u.Password=="Sukesh")
+            {
+                return UserStatus.AuthentucatedUser;
+            }
+            else
+            {
+                return UserStatus.NonAuthenticatedUser;
+            }
         }
        
     }
