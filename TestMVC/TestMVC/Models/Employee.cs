@@ -12,7 +12,7 @@ namespace TestMVC.Models
         [Key]
         public int EmployeeId { get; set; }
  
-        [Required(ErrorMessage ="Enter FirstName")]
+        [FirstNameValidation]
         public string FirstName
         {
             get;set;
@@ -23,7 +23,7 @@ namespace TestMVC.Models
             get;set;
         }
        
-        public int Salary
+        public int? Salary
         {
             get;set;
         }

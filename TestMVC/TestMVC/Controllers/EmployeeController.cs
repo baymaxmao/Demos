@@ -19,6 +19,8 @@ namespace TestMVC.Controllers
         }
         */
         //通过连接地址中可以传入参数
+        [Authorize]
+        //加了认证属性会先通过web.config设置的authertication跳转到登录页面
         public ActionResult Index()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
@@ -46,7 +48,7 @@ namespace TestMVC.Controllers
         }
         public ActionResult AddNew()
         {
-            return View("CreateEmployee");
+            return View("CreateEmployee",new CreateEmployeeViewModel());
         }
         /*
         public string SaveEmployee(string FirstName,string LastName,string Salary)
@@ -54,6 +56,8 @@ namespace TestMVC.Controllers
             return FirstName + "|" + LastName + "|" + Salary;
         }
          */
+         //授权认证
+       
         public ActionResult SaveEmployee(Employee e,string BtnSubmit)
         {
             //处理参数名称与类属性不匹配的情况，使用Request类获取参数的值再赋值给类实例
@@ -80,7 +84,11 @@ namespace TestMVC.Controllers
                     }
                     else
                     {
-                        return View("CreateEmployee");
+                        CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
+                        vm.FirstName = e.FirstName;
+                        vm.LastName = e.LastName;
+                        vm.Salary = e.Salary.HasValue ? e.Salary.ToString() : ModelState["Salary"].Value.AttemptedValue;
+                        return View("CreateEmployee", vm);
                     }
                 case "Cancel":
                 return RedirectToAction("Index");
