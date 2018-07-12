@@ -12,6 +12,8 @@ using System.Threading;
 
 namespace TestMVC.Controllers
 {
+    
+   // [HandleError]
     public class BulkUploadController:AsyncController
     {
        [AdminFilter]
@@ -30,6 +32,7 @@ namespace TestMVC.Controllers
             bal.UploadEmployees(employees);
             return RedirectToAction("Index","Employee");
         }
+      
         public List<Employee> GetEmployees(FileUploadViewModel model)
         {
             List<Employee> employees = new List<Employee>();
@@ -42,7 +45,7 @@ namespace TestMVC.Controllers
                 Employee e = new Employee();
                 e.FirstName = values[0];
                 e.LastName = values[1];
-                e.Salary =Convert.ToInt32(values[2]);
+                e.Salary =int.Parse(values[2]);
                 employees.Add(e);
             }
             return employees;
