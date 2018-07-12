@@ -68,6 +68,12 @@ namespace TestMVC.Models
                 return UserStatus.NonAuthenticatedUser;
             }
         }
+        public void UploadEmployees(List<Employee> employees)
+        {
+            SalesERPDAL salesDal = new SalesERPDAL();
+            salesDal.employees.AddRange(employees);
+            salesDal.SaveChanges();
+        }
        
     }
 }
