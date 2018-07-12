@@ -21,16 +21,12 @@ namespace TestMVC.Controllers
         */
         //通过连接地址中可以传入参数
         [Authorize]
+        [HeaderFooterFilter]
         //加了认证属性会先通过web.config设置的authertication跳转到登录页面
         //仅仅放在这里授权是有问题的,还是可以通过链接http://localhost:55031/Employee/AddNew访问页面
         public ActionResult Index()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-            BaseViewModel baseViewModel = new BaseViewModel();
-            baseViewModel.UserName = User.Identity.Name;
-            baseViewModel.FooterData = new FooterViewModel();
-            baseViewModel.FooterData.CompanyName = "武汉网友科技有限公司";
-            baseViewModel.FooterData.Year = DateTime.Now.Year.ToString();
             EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
             List<Employee> employees = empBal.GetEmployees();
 
@@ -53,6 +49,7 @@ namespace TestMVC.Controllers
                 return View("Index", employeeListViewModel);
         }
         [AdminFilter]
+        [HeaderFooterFilter]
         public ActionResult AddNew()
         {
             return View("CreateEmployee",new CreateEmployeeViewModel());
@@ -64,7 +61,8 @@ namespace TestMVC.Controllers
         }
          */
          //授权认证
-       
+        [AdminFilter]
+        [HeaderFooterFilter]
         public ActionResult SaveEmployee(Employee e,string BtnSubmit)
         {
             //处理参数名称与类属性不匹配的情况，使用Request类获取参数的值再赋值给类实例

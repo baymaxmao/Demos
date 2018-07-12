@@ -49,6 +49,8 @@ namespace TestMVC.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
+            //必须增加清除Session的代码，否则logout后还是能访问AddNew
+            Session.Abandon();
             return RedirectToAction("Login");
         }
     }

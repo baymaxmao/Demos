@@ -1,18 +1,14 @@
 ﻿@using TestMVC.ViewModels;
 @model CreateEmployeeViewModel
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/MyLayout.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-   
+@section TitleSection{
+    CreateEmployees
+}
+@section HeaderSection{
     <script src="~/Scripts/js/Validation.js"></script>
     <link rel="stylesheet" href="~/Content/bootstrap.min.css" type="text/css" />
-    <meta name="viewport" content="width=device-width" />
-    <title>CreateEmployee</title>
     <script>
         function ResetForm() {
             document.getElementById('TxtFName').value = "";
@@ -20,10 +16,11 @@
             document.getElementById('TxtSalary').value = "";
         }
     </script>
-</head>
-<body>
+}
+@section ContentBody{
+
     <div>
-        <form action="/Employee/SaveEmployee"  method="post" >
+        <form action="/Employee/SaveEmployee" method="post">
             <table>
                 <tr>
                     <td>
@@ -60,17 +57,16 @@
                 <tr>
                     <td colspan="2" align="right">
                         @Html.ValidationMessage("Salary")
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="BtnSubmit" value="Save Employee" onclick="IsValid()" />
-                    <input type="submit" name="BtnSubmit" value="Cancel" />
-                    <input type="button" name="BtnReset" value="Reset" onclick="ResetForm()" />
-                </td>
-            </tr>
-        </table>
-      </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="BtnSubmit" value="Save Employee" onclick="IsValid()" />
+                        <input type="submit" name="BtnSubmit" value="Cancel" />
+                        <input type="button" name="BtnReset" value="Reset" onclick="ResetForm()" />
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
-</body>
-</html>
+}

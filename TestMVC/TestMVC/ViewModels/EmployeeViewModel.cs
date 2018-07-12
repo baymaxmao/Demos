@@ -12,7 +12,7 @@ namespace TestMVC.ViewModels
         public string SalaryColor { get; set; }
       
     }
-    public class EmployeeListViewModel
+    public class EmployeeListViewModel:BaseViewModel
     {
         public List<EmployeeViewModel> Employees { get; set; }
         
