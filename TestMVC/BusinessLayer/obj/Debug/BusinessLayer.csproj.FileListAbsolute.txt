@@ -1,0 +1,17 @@
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\BusinessEntities.dll
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\DataAccessLayer.dll
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\EntityFramework.dll
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\BusinessEntities.pdb
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\EntityFramework.xml
+E:\msl\Demos\TestMVC\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\msl\Demos\TestMVC\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+E:\msl\Demos\TestMVC\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+E:\msl\Demos\TestMVC\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+E:\msl\Demos\TestMVC\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\msl\Demos\TestMVC\BusinessLayer\obj\Debug\BusinessLayer.pdb

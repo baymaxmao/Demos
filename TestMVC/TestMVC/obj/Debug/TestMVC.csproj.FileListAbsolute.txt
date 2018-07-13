@@ -74,6 +74,8 @@ E:\work\TestMVC\TestMVC\obj\Debug\TestMVC.csproj.CoreCompileInputs.cache
 E:\work\TestMVC\TestMVC\obj\Debug\TestMVC.csproj.CopyComplete
 E:\work\TestMVC\TestMVC\obj\Debug\TestMVC.dll
 E:\work\TestMVC\TestMVC\obj\Debug\TestMVC.pdb
+E:\msl\Demos\TestMVC\TestMVC\obj\Debug\TestMVC.csprojResolveAssemblyReference.cache
+E:\msl\Demos\TestMVC\TestMVC\obj\Debug\TestMVC.csproj.CoreCompileInputs.cache
 E:\msl\Demos\TestMVC\TestMVC\bin\ApplicationInsights.config
 E:\msl\Demos\TestMVC\TestMVC\bin\TestMVC.dll.config
 E:\msl\Demos\TestMVC\TestMVC\bin\TestMVC.dll
@@ -105,7 +107,8 @@ E:\msl\Demos\TestMVC\TestMVC\bin\roslyn\vbc.rsp
 E:\msl\Demos\TestMVC\TestMVC\bin\roslyn\VBCSCompiler.exe
 E:\msl\Demos\TestMVC\TestMVC\bin\roslyn\VBCSCompiler.exe.config
 E:\msl\Demos\TestMVC\TestMVC\bin\Antlr3.Runtime.dll
-E:\msl\Demos\TestMVC\TestMVC\bin\EntityFramework.dll
+E:\msl\Demos\TestMVC\TestMVC\bin\BusinessEntities.dll
+E:\msl\Demos\TestMVC\TestMVC\bin\BusinessLayer.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\EntityFramework.SqlServer.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\Microsoft.AI.Agent.Intercept.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\Microsoft.AI.DependencyCollector.dll
@@ -124,8 +127,14 @@ E:\msl\Demos\TestMVC\TestMVC\bin\System.Web.Razor.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\System.Web.WebPages.Deployment.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\System.Web.WebPages.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\System.Web.WebPages.Razor.dll
+E:\msl\Demos\TestMVC\TestMVC\bin\ViewModel.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\WebGrease.dll
-E:\msl\Demos\TestMVC\TestMVC\bin\EntityFramework.xml
+E:\msl\Demos\TestMVC\TestMVC\bin\DataAccessLayer.dll
+E:\msl\Demos\TestMVC\TestMVC\bin\EntityFramework.dll
+E:\msl\Demos\TestMVC\TestMVC\bin\BusinessEntities.pdb
+E:\msl\Demos\TestMVC\TestMVC\bin\BusinessLayer.pdb
+E:\msl\Demos\TestMVC\TestMVC\bin\BusinessLayer.dll.config
+E:\msl\Demos\TestMVC\TestMVC\bin\ViewModel.pdb
 E:\msl\Demos\TestMVC\TestMVC\bin\EntityFramework.SqlServer.xml
 E:\msl\Demos\TestMVC\TestMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\msl\Demos\TestMVC\TestMVC\bin\System.Web.Helpers.xml
@@ -142,6 +151,9 @@ E:\msl\Demos\TestMVC\TestMVC\bin\Microsoft.AI.DependencyCollector.xml
 E:\msl\Demos\TestMVC\TestMVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\msl\Demos\TestMVC\TestMVC\bin\Microsoft.AI.WindowsServer.xml
 E:\msl\Demos\TestMVC\TestMVC\bin\Microsoft.AI.Web.xml
+E:\msl\Demos\TestMVC\TestMVC\bin\DataAccessLayer.pdb
+E:\msl\Demos\TestMVC\TestMVC\bin\DataAccessLayer.dll.config
+E:\msl\Demos\TestMVC\TestMVC\bin\EntityFramework.xml
 E:\msl\Demos\TestMVC\TestMVC\bin\zh-Hans\System.Web.Helpers.resources.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\zh-Hans\System.Web.Mvc.resources.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\zh-Hans\System.Web.Optimization.resources.dll
@@ -149,8 +161,6 @@ E:\msl\Demos\TestMVC\TestMVC\bin\zh-Hans\System.Web.Razor.resources.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\msl\Demos\TestMVC\TestMVC\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\msl\Demos\TestMVC\TestMVC\obj\Debug\TestMVC.csprojResolveAssemblyReference.cache
-E:\msl\Demos\TestMVC\TestMVC\obj\Debug\TestMVC.csproj.CoreCompileInputs.cache
 E:\msl\Demos\TestMVC\TestMVC\obj\Debug\TestMVC.csproj.CopyComplete
 E:\msl\Demos\TestMVC\TestMVC\obj\Debug\TestMVC.dll
 E:\msl\Demos\TestMVC\TestMVC\obj\Debug\TestMVC.pdb

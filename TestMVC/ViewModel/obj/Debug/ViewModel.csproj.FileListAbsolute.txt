@@ -1,0 +1,6 @@
+E:\msl\Demos\TestMVC\ViewModel\bin\Debug\ViewModel.dll
+E:\msl\Demos\TestMVC\ViewModel\bin\Debug\ViewModel.pdb
+E:\msl\Demos\TestMVC\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+E:\msl\Demos\TestMVC\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+E:\msl\Demos\TestMVC\ViewModel\obj\Debug\ViewModel.dll
+E:\msl\Demos\TestMVC\ViewModel\obj\Debug\ViewModel.pdb

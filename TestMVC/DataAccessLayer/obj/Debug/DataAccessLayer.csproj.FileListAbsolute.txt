@@ -1,0 +1,14 @@
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\BusinessEntities.dll
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\EntityFramework.dll
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\BusinessEntities.pdb
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\EntityFramework.xml
+E:\msl\Demos\TestMVC\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\msl\Demos\TestMVC\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\msl\Demos\TestMVC\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\msl\Demos\TestMVC\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+E:\msl\Demos\TestMVC\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\msl\Demos\TestMVC\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
