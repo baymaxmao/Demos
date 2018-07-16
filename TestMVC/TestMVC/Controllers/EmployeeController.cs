@@ -24,7 +24,7 @@ namespace TestMVC.Controllers
         [HeaderFooterFilter]
         //加了认证属性会先通过web.config设置的authertication跳转到登录页面
         //仅仅放在这里授权是有问题的,还是可以通过链接http://localhost:55031/Employee/AddNew访问页面
-        [Route("Employee/List/{id}")]
+        [Route("Employee/List/")]
         public ActionResult Index(string id)
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();

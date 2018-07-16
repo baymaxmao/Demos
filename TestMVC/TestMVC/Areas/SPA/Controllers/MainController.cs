@@ -6,6 +6,7 @@ using OldViewModel = TestMVC.ViewModels;
 using System.Web.Mvc;
 using TestMVC.ViewModels.SPA;
 using TestMVC.Models;
+using TestMVC.Filters;
 
 namespace TestMVC.Areas.SPA.Controllers
 {
@@ -32,7 +33,7 @@ namespace TestMVC.Areas.SPA.Controllers
             {
                 EmployeeViewModel empViewModel = new EmployeeViewModel();
                 empViewModel.EmployeeName = emp.FirstName + " " + emp.LastName;
-                empViewModel.Salary = emp.Salary.Value.ToString();
+                empViewModel.Salary = emp.Salary.Value.ToString("");
                 if (emp.Salary > 15000)
                 {
                     empViewModel.SalaryColor = "yellow";
@@ -57,6 +58,31 @@ namespace TestMVC.Areas.SPA.Controllers
             {
                 return new EmptyResult();
             }
+        }
+        [AdminFilter]
+        public ActionResult AddNew()
+        {
+            CreateEmployeeViewModel v = new CreateEmployeeViewModel();
+            return PartialView("CreateEmployee", v);
+        }
+
+        [AdminFilter]
+        public ActionResult SaveEmployee(Employee emp)
+        {
+            EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
+            empBal.SaveEmployee(emp);
+            EmployeeViewModel empViewModel = new EmployeeViewModel();
+            empViewModel.EmployeeName = emp.FirstName + " " + emp.LastName;
+            empViewModel.Salary = emp.Salary.Value.ToString("C");
+            if(emp.Salary>15000)
+            {
+                empViewModel.SalaryColor = "yellow";
+            }
+            else
+            {
+                empViewModel.SalaryColor = "green";
+            }
+            return Json(empViewModel);
         }
     }
 }
